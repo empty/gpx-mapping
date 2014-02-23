@@ -41,7 +41,10 @@
         L.control.scale().addTo(map);
         map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
 
-        var tracks = new L.featureGroup();
+        var tracks = new L.featureGroup()
+            .on('click', function(e) {
+            });
+
         var layers = {};
 
         {% for file in files %}
@@ -111,9 +114,9 @@
                     $("#map-pane").addClass("col-md-10");
                     $("#upload-pane").show("slow");
                 } else {
+                    $("#upload-pane").hide("slow");
                     $("#map-pane").removeClass("col-md-10");
                     $("#map-pane").addClass("col-md-12");
-                    $("#upload-pane").hide("slow");
                 }
 
             });
