@@ -1,13 +1,11 @@
 <html>
 <head>
-    <title>Leaflet KML Example</title>
+    <title>Leaflet GPX</title>
 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
     <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
     <!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.ie.css" /><![endif]-->
 
-    <!-- Bring in the leaflet KML plugin -->
-    <script src="/static/js/Leaflet.PolylineMeasuredDistance.js"></script>
     <script src="/static/js/GPX.js"></script>
 
     <script language="javascript">
@@ -19,6 +17,7 @@
         }
         return color;
     }
+
     function init() {
         var map = new L.Map('map');
 
